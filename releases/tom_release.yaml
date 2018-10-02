@@ -1,10 +1,12 @@
 ---
-  apiVersion: helm.integrations.flux.weave.works/v1alpha2
-  kind: FluxHelmRelease
-  metadata:
-    name: tom
-    namespace: default
-  spec:
-    chartGitPath: tom
-    values:
-      replicaCount: 2
+apiVersion: helm.integrations.flux.weave.works/v1alpha2
+kind: FluxHelmRelease
+metadata:
+  name: tom
+  namespace: default
+  annotations:
+    flux.weave.works/automated: 'true'
+spec:
+  chartGitPath: tom
+  values:
+    replicaCount: 2
