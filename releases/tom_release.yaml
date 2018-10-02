@@ -9,4 +9,7 @@ metadata:
 spec:
   chartGitPath: tom
   values:
-    replicaCount: 2
+      image:
+        repository: tomwells/bootcamp
+        tag: v2.0.0
+      replicaCount: 2
