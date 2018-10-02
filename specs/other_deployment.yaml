@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: other-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: other-pod
+  template:
+    metadata:
+      labels:
+        app: other-pod
+    spec:
+      containers:
+      - name: other1
+        image: tomwells/bootcamp
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: 1000m
+            memory: "1000Mi"
+          requests:
+            cpu: 200m
+            memory: "500Mi"
