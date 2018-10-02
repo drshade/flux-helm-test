@@ -6,3 +6,5 @@
     namespace: default
   spec:
     chartGitPath: tom
+    values:
+      replicaCount: 1
