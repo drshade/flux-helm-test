@@ -11,5 +11,5 @@ spec:
   values:
     image:
       repository: tomwells/bootcamp
-      tag: v3.0.0
+      tag: v4.0.0
     replicaCount: 4
