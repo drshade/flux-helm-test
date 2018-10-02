@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: other1
-        image: tomwells/bootcamp
+        image: tomwells/bootcamp:v1.0.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000
